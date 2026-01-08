@@ -139,23 +139,17 @@ animatedElements.forEach(el => {
     observer.observe(el);
 });
 
-// Add typing effect to hero title (optional enhancement)
+// Hero title fade-in animation
 const heroTitle = document.querySelector('.hero-title');
 if (heroTitle) {
-    const text = heroTitle.innerHTML;
-    heroTitle.innerHTML = '';
-    let index = 0;
+    heroTitle.style.opacity = '0';
+    heroTitle.style.transform = 'translateY(20px)';
+    heroTitle.style.transition = 'opacity 1s ease, transform 1s ease';
     
-    function type() {
-        if (index < text.length) {
-            heroTitle.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(type, 50);
-        }
-    }
-    
-    // Start typing effect after a short delay
-    setTimeout(type, 500);
+    setTimeout(() => {
+        heroTitle.style.opacity = '1';
+        heroTitle.style.transform = 'translateY(0)';
+    }, 300);
 }
 
 // Project card hover effect enhancement
