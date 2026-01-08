@@ -87,6 +87,11 @@ body {
     background-color: rgba(99, 102, 241, 0.1);
 }
 
+.nav-link.active {
+    color: var(--primary-color);
+    background-color: rgba(99, 102, 241, 0.1);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;

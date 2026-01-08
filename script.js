@@ -218,6 +218,9 @@ window.addEventListener('scroll', () => {
     scrollProgress.style.width = scrolled + '%';
 });
 
+// Set current year in footer
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 // Console message for developers
 console.log('%cHarold Luna Portfolio', 'color: #6366f1; font-size: 24px; font-weight: bold;');
 console.log('%cBuilt with ❤️ using HTML, CSS, and JavaScript', 'color: #8b5cf6; font-size: 14px;');
